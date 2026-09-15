@@ -129,7 +129,15 @@ export default function App() {
     case 'winner':
       return (
         <StageFrame {...frameProps}>
-          <WinnerReveal winner={results[0]} runnersUp={results.slice(1, 4)} />
+          {results.length > 0 ? (
+            <WinnerReveal winner={results[0]} runnersUp={results.slice(1, 4)} />
+          ) : (
+            <StageMessage
+              eyebrow="Results"
+              headline="Loading..."
+              support="Fetching final results"
+            />
+          )}
         </StageFrame>);
 
 
