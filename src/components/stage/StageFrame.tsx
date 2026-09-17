@@ -38,16 +38,6 @@ export function StageFrame({
           </div>
         </div>
         <div className="flex items-center gap-8">
-          {typeof totalVotes === 'number' &&
-          <div className="text-right">
-              <div className="text-[11px] font-extrabold uppercase tracking-tech text-fg-muted">
-                Total audience votes
-              </div>
-              <div className="num text-3xl font-extrabold leading-none text-fg lg:text-4xl">
-                {totalVotes.toLocaleString()}
-              </div>
-            </div>
-          }
           {typeof timer === 'number' &&
           <div className="text-right">
               <div className="text-[11px] font-extrabold uppercase tracking-tech text-fg-muted">
@@ -76,20 +66,6 @@ export function StageFrame({
       <main className="relative flex flex-1 flex-col justify-center px-8 py-8 lg:px-12">
         {children}
       </main>
-
-      {ticker &&
-      <footer className="flex shrink-0 items-center gap-6 border-t border-line bg-ink-950 px-8 py-3 lg:px-12">
-          {ticker.map((t, i) =>
-        <span
-          key={t}
-          className="flex items-center gap-6 text-[11px] font-extrabold uppercase tracking-tech text-fg-dim">
-          
-              {i > 0 && <span className="h-3 w-px bg-line" aria-hidden />}
-              {t}
-            </span>
-        )}
-        </footer>
-      }
     </div>);
 
 }
