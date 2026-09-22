@@ -73,7 +73,7 @@ export function ResultRow({
         stage ? 'text-[72px] leading-none' : 'text-2xl'} ${
         lead ? 'text-brand' : 'text-fg'}`}>
         
-        <AnimatedNumber value={metric} decimals={stage ? 0 : 1} suffix="%" />
+        <AnimatedNumber value={metric} decimals={stage ? 0 : 1} suffix=" pts" />
       </div>
     </motion.li>);
 

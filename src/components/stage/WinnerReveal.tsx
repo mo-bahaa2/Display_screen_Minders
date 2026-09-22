@@ -67,7 +67,7 @@ export function WinnerReveal({
               <AnimatedNumber
                 value={winner.finalPct}
                 decimals={1}
-                suffix="%"
+                suffix=" pts"
                 duration={1400} />
               
             </div>
@@ -75,7 +75,7 @@ export function WinnerReveal({
           <div className="hidden h-20 w-px bg-line sm:block" aria-hidden />
           <div className="hidden text-left sm:block">
             <div className="mt-4 text-[13px] font-extrabold uppercase tracking-widest text-brand lg:text-sm">
-              Total Score: {winner.finalPct.toFixed(0)}%
+              Total Score: {winner.finalPct.toFixed(0)} pts
             </div>
             <div className="mt-2 text-2xl font-extrabold text-fg-soft lg:text-4xl">
               Congratulations!
@@ -101,7 +101,7 @@ export function WinnerReveal({
                 {r.team.name}
               </span>
               <span className="num text-2xl font-extrabold text-fg-muted">
-                {r.finalPct.toFixed(1)}%
+                {r.finalPct.toFixed(1)} pts
               </span>
             </li>
           )}
