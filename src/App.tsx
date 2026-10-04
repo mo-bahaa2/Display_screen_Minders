@@ -103,14 +103,15 @@ export default function App() {
 
     case 'hidden':
       return (
-        <StageFrame {...frameProps}>
+        <StageFrame {...frameProps} timer={timer}>
           <StageMessage
             eyebrow="Results held"
             headline="Results Hidden"
             support="The control room is verifying the tally."
             showLogo />
           
-        </StageFrame>);
+        </StageFrame>
+      );
 
 
     case 'final_ready':

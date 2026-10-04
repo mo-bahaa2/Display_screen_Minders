@@ -24,9 +24,9 @@ export function StageFrame({
   ticker
 }: StageFrameProps) {
   return (
-    <div className="tech-grid-dark tech-noise relative flex min-h-full w-full flex-col overflow-hidden">
+    <div className="tech-canvas relative flex min-h-full w-full flex-col overflow-hidden">
       <div className="hatch h-2 w-full shrink-0" aria-hidden />
-      <header className="flex shrink-0 items-center justify-between gap-6 border-b border-line px-8 py-5 lg:px-12">
+      <header className="flex shrink-0 items-center justify-between gap-6 border-b border-line px-8 py-5 lg:px-12" style={{ position: 'relative', zIndex: 10 }}>
         <div className="flex items-center gap-4">
           <LogoMark size={52} />
           <div>
@@ -60,7 +60,7 @@ export function StageFrame({
           }
         </div>
       </header>
-      <main className="relative flex flex-1 flex-col justify-center px-8 py-8 lg:px-12">
+      <main className="relative flex flex-1 flex-col justify-center px-8 py-8 lg:px-12" style={{ zIndex: 10 }}>
         <AnimatePresence mode="wait">
           <motion.div
             key={String((children as any)?.type?.name || Math.random())}
